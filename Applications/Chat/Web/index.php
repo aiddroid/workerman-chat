@@ -111,8 +111,10 @@
     	client_list_slelect.empty();
     	userlist_window.append('<h4>在线用户</h4><ul>');
     	client_list_slelect.append('<option value="all" id="cli_all">所有人</option>');
+    	var avatar = '';
     	for(var p in client_list){
-            userlist_window.append('<li id="'+p+'">'+client_list[p]+'</li>');
+    	    avatar = '<img src="http://lorempixel.com/38/38/?'+p+'" class="user_icon" width="20" height="20" />';
+            userlist_window.append('<li id="'+p+'">'+avatar+client_list[p]+'</li>');
             client_list_slelect.append('<option value="'+p+'">'+client_list[p]+'</option>');
         }
     	$("#client_list").val(select_client_id);
